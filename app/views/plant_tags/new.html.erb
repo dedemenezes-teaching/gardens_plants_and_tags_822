@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8">
+      <h1>Add a new tag to <%= @plant.name %></h1>
+      <%= simple_form_for [@plant, @plant_tag] do |f| %>
+        <%= f.input :tag, collection: Tag.all %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
